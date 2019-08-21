@@ -150,18 +150,18 @@ header img{
 }
 section{
 	width: 100%;
-	background: url(army1.jpg) no-repeat;
+	background: url(Army1.jpg) no-repeat;
 	background-size: cover;
 	border-top:black solid 5px;
 	position: relative;
 	display: flex;
 }
 section:nth-of-type(1){
-	background-image: url(army2.jpg);
+	background-image: url(Army2.jpg);
 	background-position: 50% 10%
 }
 section:nth-of-type(2){
-	background-image: url(army1.jpg);
+	background-image: url(Army1.jpg);
 	background-position: 50% 10%
 }
 section:nth-of-type(3){
