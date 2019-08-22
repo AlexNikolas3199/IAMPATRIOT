@@ -192,7 +192,6 @@ nav a:hover:before{
 	opacity: 0;
 }
 form{
-	padding-top: 90px;
 	position: fixed;
 	transition: 0.5s ease-in-out;
 	top:0;
@@ -206,6 +205,7 @@ form{
 	flex-direction: column;
 	align-items: center;
 	transform: translateX(200%);
+	overflow: auto;
 }
 .mailbtn:checked ~ form{
 	transform: translateX(0);
@@ -216,6 +216,7 @@ form{
 form h3,
 form h1{
 	color:orange;
+	text-align: center;
 	text-shadow: 2px 2px 5px black
 }
 form h3{
@@ -237,7 +238,7 @@ form .mailbox input[type="text"]{
 }
 form .mailbox textarea{
 	width: 70%;
-	height: 100px;
+	height: 80px;
 	outline: none;
 	font-size: 17px;
 	border:outset 5px orange;
@@ -245,7 +246,7 @@ form .mailbox textarea{
 }
 form input[type="submit"]{
 	width: 150px;
-	height: 60px;
+	min-height: 60px;
 	margin-top:20px;
 	font-size: 17px;
 	font-family:"Squares Bold";
@@ -266,25 +267,47 @@ form address{
 	text-shadow: 2px 2px 4px black
 }
 header{
-	background: url(binaryback.jpg) no-repeat;
-	background-size: cover;
-	background-position: 50% 0%;
+	background: black;
 	position: relative;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+.blackvideo{
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right:0; 
+	bottom:0; 
+	left: 0;
+	overflow: hidden;
+}
+.blackvideo:before{
+	position: absolute;
+	content: '';
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 2
+}
 video{
 	position: absolute;
 	top:0;
 	left: 0;
-	z-index: 1
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	
 }
 header img{
 	margin-top:100px;
 	width: 860px;
-	z-index: 10;
+	z-index: 3;
   	filter: drop-shadow(0 0 15px orange);
   	animation: logo 2s forwards
 }
