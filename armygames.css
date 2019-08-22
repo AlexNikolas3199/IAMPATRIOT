@@ -8,6 +8,46 @@ body{
 	padding: 0;
 	margin: 0
 }
+.navbtn{
+	position: fixed;
+	right: 20px;
+	top:20px;
+	width: 50px;
+	height: 50px;
+	z-index: 99;
+	cursor: pointer;
+	opacity: 0;
+	display: none;
+}
+.icon{
+	position: fixed;
+	right: 20px;
+	top:20px;
+	width: 50px;
+	height: 50px;
+	z-index: 98;
+	cursor: pointer;
+	background: rgba(0,0,0,0.8);
+	pointer-events: none;
+	display: none;
+}
+.icon:before{
+	content: 'close';
+	position: absolute;
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;
+	font-size: 12px;
+	color:orange;
+	text-align: center;
+	line-height: 50px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.navbtn:checked ~ .icon:before{
+	content: 'menu';
+}
 nav{
 	position: fixed;
 	top:0;
@@ -17,9 +57,10 @@ nav{
 	align-items: center;
 	flex-wrap: wrap;
 	z-index: 10;
-	min-height:80px;
-	background: rgba(0,0,0,0.5);
+	min-height:90px;
+	background: rgba(0,0,0,0.7);
 	width: 100%;
+	transition: 0.3s ease-in-out;
   	animation: logo 2s forwards
 }
 nav  a{
@@ -32,6 +73,10 @@ nav  a{
 	font-weight: bold;
 	transition: 0.3s;
 	position: relative;
+}
+nav  a img{
+	width:100px;
+  	filter: drop-shadow(0 0 5px orange); 
 }
 nav a:hover{
 	color:#e0e0e0;
@@ -58,6 +103,7 @@ nav a:hover:before{
 .linkgames p{
 	color:orange;
 	margin: 0;
+	text-align: center;
 	font-size: 20px;
 	transition: 0.3s ease-in-out;
 }
@@ -67,7 +113,8 @@ nav a:hover:before{
 	margin: 0;
 	justify-content: space-around;
 	align-items: center;
-	width: 80%;
+	width: 100%;
+	padding: 0;
 	z-index: -1;
 	transform:translateY(-20px);
 	opacity:0;
@@ -88,25 +135,38 @@ nav a:hover:before{
 .givequest{
 	width: 50px;
 	height: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	position: relative;
 	background: orange;
 	border-radius: 50%;
 	position: fixed;
 	bottom: 5%;
-	right: 5%;
+	right: 7%;
 	cursor: pointer;
 	z-index: 100;
 	transition: 0.2s ease-in-out;
-	animation: pulsq infinite 1.2s ease-in-out 
+	animation: pulsq infinite 1.2s ease-in-out;
+	box-shadow:0 0 3px 7px rgba(255,162,0,0.5);
+	z-index: 101
 }
 .givequest i{
 	color:white;
-	transform: scale(1.6);
+	position: absolute;
+	top:50%;
+	right: 50%;
+	transform:scale(1.6) translate(35%,-38%);
+	transition: 0.3s ease-in-out
 }
-.givequest:hover {
+.mailbtn:hover ~ .givequest {
 	transform: scale(1.2);
+}
+.givequest i:last-child{
+	opacity: 0
+}
+.mailbtn:checked ~ .givequest i:first-child{
+	opacity: 0
+}
+.mailbtn:checked ~ .givequest i:last-child{
+	opacity: 1
 }
 @keyframes pulsq{
 	0%{
@@ -122,22 +182,110 @@ nav a:hover:before{
 	0 0 1px 100px rgba(255,162,0,0)
 	}
 }
+.mailbtn{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	z-index: 10000;
+	bottom: 5%;
+	right: 7%;
+	opacity: 0;
+}
+form{
+	padding-top: 90px;
+	position: fixed;
+	transition: 0.5s ease-in-out;
+	top:0;
+	right: 0;
+	width: 40%;
+	height: 100%;
+	background: #444;
+	box-shadow:-7px 0 10px black;
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transform: translateX(200%);
+}
+.mailbtn:checked ~ form{
+	transform: translateX(0);
+}
+.mailbtn:checked ~ .givequest{
+	animation: none;
+}
+form h3,
+form h1{
+	color:orange;
+	text-shadow: 2px 2px 5px black
+}
+form h3{
+	margin:10px 0
+}
+form .mailbox{
+	text-align: center;
+	width: 100%;
+	margin-top:20px;
+}
+form .mailbox input[type="text"]{
+	width: 70%;
+	height: 30px;
+	font-size: 17px;
+	padding-left: 10px;
+	outline: none;
+	border:outset 5px orange;
+	box-shadow: 3px 3px 15px  black
+}
+form .mailbox textarea{
+	width: 70%;
+	height: 100px;
+	outline: none;
+	font-size: 17px;
+	border:outset 5px orange;
+	box-shadow: 3px 3px 15px  black
+}
+form input[type="submit"]{
+	width: 150px;
+	height: 60px;
+	margin-top:20px;
+	font-size: 17px;
+	font-family:"Squares Bold";
+	outline: none;
+	border:outset 5px orange;
+	box-shadow: 3px 3px 15px  black;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+form input[type="submit"]:hover{
+	background: orange;
+	color:white;
+}
+form address{
+	margin-top:30px;
+	color: orange;
+	font-size: 12px;
+	text-shadow: 2px 2px 4px black
+}
 header{
-	background: linear-gradient(
-          rgba(0, 0, 0, 0.7), 
-          rgba(0, 0, 0, 0.7)
-        ), url(binaryback.jpg) no-repeat;
+	background: url(binaryback.jpg) no-repeat;
 	background-size: cover;
 	background-position: 50% 0%;
+	position: relative;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+video{
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 1
+}
 header img{
 	margin-top:100px;
-	width: 660px;
-  	filter: drop-shadow(0 0 15px white);
+	width: 860px;
+	z-index: 10;
+  	filter: drop-shadow(0 0 15px orange);
   	animation: logo 2s forwards
 }
 @keyframes logo{
@@ -152,7 +300,8 @@ section{
 	width: 100%;
 	background: url(Army1.jpg) no-repeat;
 	background-size: cover;
-	border-top:black solid 5px;
+	border-top:orange solid 5px;
+	box-shadow:inset 0 0 10px 10px;  
 	position: relative;
 	display: flex;
 }
@@ -226,10 +375,4 @@ justify-content: flex-end;
 .butttons a:hover{
 	color: #949191;
 	border-color:#545151;
-}
-@media screen and (max-width:900px){
-	header img{
-		width: 97%;
-	}
-
 }
