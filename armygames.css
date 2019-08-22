@@ -52,7 +52,7 @@ nav{
 	position: fixed;
 	top:0;
 	left:0;
-	display: flex;
+	display: flex !important;
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
@@ -97,11 +97,13 @@ nav a:hover:before{
 }
 .linkgames{
 	position: relative;
+	display: inline-block;
 	padding-top:15px;
 	padding-bottom: 15px
 }
 .linkgames p{
 	color:orange;
+	font-family:"Squares Bold";
 	margin: 0;
 	text-align: center;
 	font-size: 20px;
@@ -267,7 +269,6 @@ form address{
 	text-shadow: 2px 2px 4px black
 }
 header{
-	background: black;
 	position: relative;
 	height: 100vh;
 	display: flex;
