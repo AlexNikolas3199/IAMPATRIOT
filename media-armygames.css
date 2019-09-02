@@ -37,6 +37,16 @@ nav .linkgames p{
 .sectiontext{
 	width: 100%
 }
+article .testflex{
+	width: 90%;
+	flex-direction: column;
+}
+article .friends{
+	justify-content: space-around;
+}
+article .friends a{
+	margin:20px 0
+}
 }
  @media (min-aspect-ratio: 16/9) {
       video { height: 300%; top: -100%; }
@@ -44,3 +54,11 @@ nav .linkgames p{
  @media (max-aspect-ratio: 16/9) {
      video { width: 300%; left: -100%; }
  }
+@media screen and (max-width:600px){
+	video{
+		display: none
+	}
+	body{
+		background: url(binaryback.jpg);
+	}
+}

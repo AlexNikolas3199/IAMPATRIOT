@@ -3,11 +3,12 @@
 <head>
 <meta charset=UTF-8/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="Group 3.png" type="image/png">
 <link rel="stylesheet" href="armygames.css">
 <link rel="stylesheet" href="media-armygames.css">
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="testpatriot.css">
-    <title>I AM PATRIOT</title>
+    <title>CYBERPATRIOT</title>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="jQuizler.js"></script>
@@ -19,13 +20,11 @@
 var questions = [
     {
         type: "choose",
-        question: "Взгляни вокруг , оглянись назад , ... с тобою связаться хотят!",
+        question: "Вопрос 1. Когда началась Великая Отечественная война? ",
         answers: [
-            "Мухи",
-            "Духи",
-            "Вуки",
-            "Лохи",
-            "Шл*хи"
+            "8 мая 1941 года",
+            "22 июня 1941 года",
+            "11 августа 1941 года"
         ],
         correct: [2]
     },
@@ -217,22 +216,25 @@ $("document").ready(function(){
     <nav>
         <a href="index.html"><img src="Group 3.png" alt=""></a>
         <a href="#">о турнире</a>
-        <a href="#">тест по истории отечества</a>
         <div class="linkgames">
             <p>киберспортивные турниры</p>
             <ul>
                 <li><a href="#">CS:GO</a></li>
                 <li><a href="#">WoT</a></li>
+                <li><a href="#">лазертаг</a></li>
             </ul>
         </div>
+        <a href="#">тест по истории отечества</a>
         <a href="photoreport.html">фотоотчет</a>
     </nav>
     <div class="testbox">
+
         <div id="jQuizler" class="main-quiz-holder">
             <h3>Тест по истории отечества</h3>
     		<p><img src="Group 3.png" /></p>
             <button class="btn btn-large">Начать тест</button>
         </div>
+
     </div>
 </body>
 </html>

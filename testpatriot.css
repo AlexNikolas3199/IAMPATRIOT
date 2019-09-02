@@ -1,7 +1,82 @@
+
 .testbox{
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: url(binaryback.jpg) no-repeat;
+	background-size: cover;
+	background-position: 50% 50%
+}
+.testbox:before{
+	position: absolute;
+	content: '';
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+}
+.main-quiz-holder{
+	background: orange;
+	box-shadow: inset 0 0 20px 10px black;
+	border:none !important;
+	z-index: 1;
+	transition: 0.3s
+}
+.intro{
+	padding: 0 30px
+}
+button.btn{
+	font-family: "Squares Bold";
+	border-radius: 0;
+	border:solid 1px black;
+}
+.answers li{
+	font-family: "Squares Bold";
+	border-radius: 0;
+	border:solid 1px black;
+}
+.progress.progress-info.progress-striped{
+	border-radius: 0;
+	border:solid 1px black;
+}
+.answers{
+	margin-top:30px !important;
+}
+@media screen and (max-width:600px){
+.main-quiz-holder{
+	width: 100% !important;
+}
+.slide-container.question{
+	width: 100% !important;
+	text-align: center;
+}
+.progress.progress-info.progress-striped{
+	width: 100%;
+}
+.answers{
+	width: 90%;
+	margin:auto  !important;
+}
+.answers li{
+	margin: 20px 0 !important;
+}
+.nav-container{
+	text-align: center;
+}
+.nav-container button{
+	margin: 10px
+}
+.next.btn.btn-success{
+	float: none
+}
+.progress.progress-info.progress-striped{
+	width: 90%;
+	margin: auto;
+}
+.slide-container.question #text{
+	color:red;
+}
 }
