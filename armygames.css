@@ -2,7 +2,9 @@
 font-family: "Squares Bold";
 src:url("Squares Bold Free.otf");
 }
-
+html{
+	scroll-behavior: smooth;
+}
 body{
 	font-family:"Squares Bold" !important;
 	padding: 0;
@@ -225,7 +227,8 @@ form h1{
 	text-shadow: 2px 2px 5px black
 }
 form h1{
-	margin-top:30px 
+	margin-top:30px;
+	font-size: 2em !important
 }
 form h3{
 	margin:10px 0
@@ -241,6 +244,7 @@ form .mailbox input[type="text"]{
 	font-size: 17px;
 	padding-left: 10px;
 	outline: none;
+	margin: 0 !important;
 	border:outset 5px orange;
 	box-shadow: 3px 3px 15px  black
 }
@@ -249,6 +253,7 @@ form .mailbox textarea{
 	height: 80px;
 	outline: none;
 	font-size: 17px;
+	margin: 0 !important;
 	border:outset 5px orange;
 	box-shadow: 3px 3px 15px  black
 }
@@ -280,6 +285,15 @@ header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.logotext{
+	z-index: 10;
+	text-shadow: 3px 3px 4px black;
+	position: absolute;
+	top:35%;
+	right: 51%;
+	transform:scale(1.6) translate(35%,-38%);
+	color:orange;
 }
 .blackvideo{
 	position: absolute;
@@ -329,9 +343,23 @@ header img{
 
 article{
 	background: rgb(20,20,20);
-	border-top:orange solid 5px;  
-	padding: 20px 0 0 20px;
-	padding: 25px 0
+	width: 100%;
+	border-top:orange solid 5px;
+	padding: 25px 0;
+}
+article .tournamenttext{
+	background: orange;
+	margin: 20px auto;
+	width: 70%;
+	padding: 20px 30px;
+	box-shadow: inset 0 0 30px black;
+}
+article .tournamenttext p {
+	word-spacing: 4px;
+	line-height: 30px;
+	font-size: 20px;
+	text-indent:30px;
+	color:rgb(20,20,20);
 }
 article .testflex{
 	width: 820px;
@@ -342,10 +370,15 @@ article .testflex{
 }
 article .testflex p{
 	max-width: 600px;
-	line-height: 25px;
 	padding: 20px;
 	background: orange;
-	box-shadow: inset 0 0 10px 4px black
+	color:rgb(20,20,20);
+	box-shadow: inset 0 0 30px  black;
+	word-spacing: 4px;
+	line-height: 30px;
+	font-size: 20px;
+	text-indent:30px;
+	color:rgb(20,20,20);
 }
 article .link{
 	padding: 10px 15px;
@@ -409,22 +442,30 @@ article img{
 	opacity: 1
 }
 .indexsection:nth-of-type(1) .container{
-	background-image: url(Army1.jpg);
+	background-image: url(csgo.png);
 	background-position: 50% 10%
 }
 .indexsection:nth-of-type(2) .container{
-	background-image: url(Army2.jpg);
+	background-image: url(wot.jpg);
 	background-position: 50% 10%
 }
 .indexsection:nth-of-type(3) .container{
+	background-image: url(Army1.jpg);
+	background-position: 50% 10%
+}
+.indexsection:nth-of-type(4) .container{
+	background-image: url(Army2.jpg);
+	background-position: 50% 10%
+}
+.indexsection:nth-of-type(5) .container{
 	background-image: url(army3.jpg);
 	background-position: 50% 50%;
 }
-.indexsection:nth-of-type(4) .container{
+.indexsection:nth-of-type(6) .container{
 	background-image: url(army4.jpg);
 	background-position: 50% 30%;
 }
-.indexsection:nth-of-type(5) .container{
+.indexsection:nth-of-type(7) .container{
 	background-image: url(army5.jpg);
 	background-position: 50% 60%;
 }
@@ -478,4 +519,52 @@ justify-content: flex-end;
 .butttons a:hover{
 	color: #949191;
 	border-color:#545151;
+}
+footer{
+	background:rgb(20,20,20);
+	border-top:orange solid 5px;
+	border-bottom:orange solid 7px;
+	width: 100%;
+	min-height:30vh;
+	padding-top:30px;
+}
+footer h2{
+	color:orange;
+	margin: 0;
+	text-align: center;
+	font-size: 30px
+}
+.contacts{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 30px auto;
+	width: 80%;
+	flex-wrap: wrap;
+	min-height: 30vh;
+}
+.contacts .contact{
+	text-align: center;
+	width: 175px;
+	margin-bottom: 30px
+}
+.contact i{
+	transform: scale(2.5);
+	color:orange;
+}
+.contact p{
+	margin-top:25px;
+	text-transform: uppercase;
+	color:#999;
+	font-weight: bold
+}
+.contact h3{
+	font-size: 15px;
+	font-weight: bold;
+	color:orange;
+	text-transform: uppercase
+}
+.contact a{
+	text-decoration: none;
+	color:orange
 }

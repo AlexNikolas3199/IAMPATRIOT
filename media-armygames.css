@@ -61,4 +61,20 @@ article .friends a{
 	body{
 		background: url(binaryback.jpg);
 	}
+article .tournamenttext{
+	width: 85%;
+}
+article .tournamenttext p{
+	text-indent: 4px;
+	word-spacing: 1px;
+	font-size: 18px;
+}
+article .testflex p{
+	text-indent: 0;
+	width: 100%
+}
+footer .contacts{
+	width: 100%;
+	margin: 30px 0
+}
 }
