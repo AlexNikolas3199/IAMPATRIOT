@@ -49,6 +49,12 @@ article .friends{
 article .friends a{
 	margin:20px 0
 }
+article{
+	padding-bottom: 30px
+}
+article h2{
+	margin-top:30px;
+}
 }
  @media (min-aspect-ratio: 16/9) {
     video{
@@ -73,6 +79,10 @@ article .tournamenttext p{
 }
 article .testflex p{
 	text-indent: 0;
+}
+.sectiontext .content{
+	width: 85%;
+	margin: 0 30px
 }
 footer .contacts{
 	width: 100%;
