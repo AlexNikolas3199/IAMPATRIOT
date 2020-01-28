@@ -560,20 +560,8 @@ article img{
 	background-position: 50% 10%
 }
 .indexsection:nth-of-type(4) .container{
-	background-image: url(Army5.jpg);
-	background-position: 50% 60%
-}
-.indexsection:nth-of-type(5) .container{
-	background-image: url(army3.jpg);
-	background-position: 50% 50%;
-}
-.indexsection:nth-of-type(6) .container{
-	background-image: url(army4.jpg);
-	background-position: 50% 30%;
-}
-.indexsection:nth-of-type(7) .container{
 	background-image: url(army5.jpg);
-	background-position: 50% 60%;
+	background-position: 50% 60%
 }
 .sectiontext{
 	margin: 0;
