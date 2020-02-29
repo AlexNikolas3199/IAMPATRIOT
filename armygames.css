@@ -434,7 +434,7 @@ header img{
   	filter: drop-shadow(0 0 15px orange);
 }
 .anilogo{
-  	animation: logo 2s forwards
+  	animation: logo 2s forwards;
 }
 @keyframes logo{
 	0%{
