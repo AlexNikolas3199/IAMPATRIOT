@@ -52,7 +52,9 @@ html{
 body{
 	font-family:"Squares Bold" !important;
 	padding: 0;
-	margin: 0
+	margin: 0;
+	font-size: medium!important;
+	line-height: normal!important;
 }
 body::-webkit-scrollbar {
     width: 1em;
@@ -130,7 +132,7 @@ nav{
 	flex-wrap: wrap;
 	z-index: 10;
 	min-height:90px;
-	background: rgba(0,0,0,0.7);
+	background: rgba(0,0,0,0.8);
 	width: 100%;
 	transition: 0.3s ease-in-out;
   	animation: logo 2s forwards
@@ -197,6 +199,9 @@ nav > a:first-of-type:before{
 	transform:translateY(-20px);
 	opacity:0;
 	transition: 0.3s ease-in-out;
+}
+.linkgames ul li a{
+	margin:5px;
 }
 .linkgames li{
 	list-style: none;
@@ -434,7 +439,7 @@ header img{
   	filter: drop-shadow(0 0 15px orange);
 }
 .anilogo{
-  	animation: logo 2s forwards;
+  	animation: logo 5s forwards;
 }
 @keyframes logo{
 	0%{
@@ -624,23 +629,21 @@ footer{
 	border-top:orange solid 5px;
 	border-bottom:orange solid 7px;
 	width: 100%;
-	min-height:30vh;
 	padding-top:30px;
 }
 footer h2{
 	color:orange;
 	margin: 0;
 	text-align: center;
+	line-height: normal!important;
 	font-size: 30px
 }
 .contacts{
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
-	margin: 30px auto;
+	margin: 15px auto;
 	width: 80%;
 	flex-wrap: wrap;
-	min-height: 30vh;
 }
 .contacts .contact{
 	text-align: center;
@@ -657,8 +660,14 @@ footer h2{
 .contacts .contact:last-child{
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	flex-wrap: wrap;
-	margin-bottom: 0;
+	width:130px;
+	height: 130px;
+	margin-bottom: 30px;
+	box-sizing: border-box;
+	border:solid 2px orange;
+	border-radius: 5px;
 }
 .contacts .contact:last-child a{
 	width: 60px;
@@ -675,7 +684,8 @@ footer h2{
 .contact p{
 	text-transform: uppercase;
 	color:#999;
-	font-weight: bold
+	font-weight: bold;
+	margin:16px 0;
 }
 .contact h3{
 	font-weight: bold;

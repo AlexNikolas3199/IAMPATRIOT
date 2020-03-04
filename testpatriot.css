@@ -5,7 +5,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: url(binaryback.jpg) no-repeat;
+	background: url(war.jpg) no-repeat;
 	background-size: cover;
 	background-position: 50% 50%
 }
@@ -26,6 +26,7 @@ body .main-quiz-holder{
 	justify-content: center;
 	align-items: center;
 	box-shadow: inset 0 0 20px 10px black;
+	border-radius: 5px;
 	border:none !important;
 	z-index: 1;
 	transition: 0.3s
