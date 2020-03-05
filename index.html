@@ -18,10 +18,19 @@
             $('.preloader_bg').delay(250).fadeOut(100);
             $('.preloader_content').delay(250).fadeOut(150);
         });
+    
     });
     $(document).ready( function(){
         $("header img").addClass("anilogo");
     });
+
+    let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    window.addEventListener('resize', () => {
+	  let vh = window.innerHeight * 0.01;
+	  document.documentElement.style.setProperty('--vh', `${vh}px`);
+	});
     </script>
     <div class="preloader_bg"></div>
     <div class="preloader_content">
